@@ -19,7 +19,7 @@ stemcells:
 instance_groups:
 - name: haproxy
   azs: [z1, z2, z3]
-  instances: 2
+  instances: 1
   vm_type: default
   stemcell: ubuntu
   networks: [{name: default}]
@@ -32,7 +32,7 @@ instance_groups:
       keepalived:
         vip: 10.244.0.100
 - name: nginx
-  instances: 4
+  instances: 2
   azs: [ z1, z2, z3 ]
   vm_type: default
   persistent_disk_type: default
